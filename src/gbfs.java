@@ -56,21 +56,16 @@ public class gbfs {
         Map<String, String> parentMap = new HashMap<>();
         openSet.offer(new WordNode(startWord, calculateHeuristic(startWord, endWord)));
 
-        // Perform GBFS
         while (!openSet.isEmpty()) {
-            // Extract the word with lowest heuristic value
             String currentWord = openSet.poll().word;
             closedSet.add(currentWord);
 
-            // If we reached the endWord, reconstruct and return the path
             if (currentWord.equals(endWord)) {
                 return reconstructPath(parentMap, endWord);
             }
 
-            // Generate neighbors of currentWord
             List<String> neighbors = generateNeighbors(currentWord, words);
             for (String neighbor : neighbors) {
-                // Add neighbor to openSet if it's not already explored
                 if (!closedSet.contains(neighbor)) {
                     nodeCount++;
                     openSet.offer(new WordNode(neighbor, calculateHeuristic(neighbor, endWord)));
@@ -79,7 +74,6 @@ public class gbfs {
             }
         }
 
-        // If no path found
         return null;
     }
 

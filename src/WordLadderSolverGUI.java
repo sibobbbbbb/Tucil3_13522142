@@ -88,7 +88,7 @@ public class WordLadderSolverGUI extends JFrame implements ActionListener {
             String algorithm = (String) algorithmComboBox.getSelectedItem();
 
             try {
-                Set<String> englishWords = readWordsFromFile("src\\words.txt");
+                Set<String> englishWords = readWordsFromFile("lib\\words.txt");
                 List<String> ladder = null;
                 long startTime, endTime, waktu;
                 int nodeCount;

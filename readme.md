@@ -13,7 +13,8 @@ Java
 5. The program will starting.
 
 ## Note
-If you are using Code Runner to run it, first, change the dictionary path in the WordLadderSolverGUI.java file on line 91 from "src\\words.txt" to "words.txt".
+1. If you are using Code Runner to run it, first, change the dictionary path in the WordLadderSolverGUI.java file on line 91 from "lib\\words.txt" to "..\\lib\\words.txt".
+2. If you want to use your own English dictionary, you can add the text file to the lib folder and modify src/WordLadderSolverGUI.java at line 91 to from "lib\\words.txt" to "lib\\yourdictionary.txt".
 
 ## Developers
 
